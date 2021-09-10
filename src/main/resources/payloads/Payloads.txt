@@ -1,0 +1,19 @@
+http://localhost:8081/getproductinfo?productId=154
+
+
+Update
+------
+http://localhost:8081/updateproduct
+
+{
+    "productId": 154,
+    "productName": "Laptop",
+    "productCategory": "Electronics",
+    "price": 3000.0,
+    "currency": "USD",
+    "description": "Dell Laptop"
+}
+
+Delete
+------
+http://localhost:8081/deleteproduct?productId=153

@@ -1,0 +1,7 @@
+{    	
+    "productName": "Chair",
+	"productCategory": "Furniture",
+    "price": "100",
+    "currency":"USD",
+    "description":"Wooden Chair"
+}
