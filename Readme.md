@@ -1,28 +1,35 @@
-**Product Management Application - Performance Imporvement **
+**Product Management Application - Performance Imporvement**
 
-Our requirement is to imporve the performance of an existing Product Management Application which provides
-Product metadata like Product Name, description, price, currency.
+**Requirement**
+Our requirement is to imporve the performance of an existing Product Management Application 
+which provides Product metadata like Product Name, description, price, currency.
 
 We created REST ENDPOINTs to provide these details using Spring Boot + JPA + MySql
 
-**Problem here is **
+**Problem here is**
 
 Everytime, use try to get product information for  given productId, a database call is made.
+
 For example, below 2 calls for the same productId (=154) results in 2 database calls.
 
 http://localhost:8081/getproductinfo?productId=154 (DB call is made)
+
 http://localhost:8081/getproductinfo?productId=154 (DB call is made)
 
 As product metadata is fairly static, we can use caching here to reduce the number of database calls and improve performance.
 
-So using REDIS caching mechanism, we are caching the results in first instance for a given productId and simply picking it from cache for all subsequent calls.
+So using REDIS caching mechanism, we are caching the results in first instance for a given productId and 
+simply picking it from cache for all subsequent calls.
+
 We configured TTL (Time-To-Live), kept Cache updation and eviction policies. 
+
 These details can be configured as per our requirement.
 
 In caching also we implemented multiple approaches like -
-Caching only when the result is not null (It means given productId exists in the database)
-Conditional Caching - Caching only if products belongs to Electronics category etc.
 
+Caching only when the result is not null (It means given productId exists in the database)
+
+Conditional Caching - Caching only if products belongs to Electronics category etc.
 These caching conditions we can modify as per our requirement.
 
 **Steps to run this application**
