@@ -39,6 +39,7 @@ These caching conditions we can modify as per our requirement.
 3. Run the application
 
 **Get Product Information** (Caching happens post this GET call for a given productId for the first time)
+
 Method  **GET**
 URL     **http://localhost:8081/getproductinfo**
 Parameters **productId=152**
@@ -67,26 +68,4 @@ You can clearly see an improvement while calling the GET endpoint for a given pr
 Thanks to caching.
 
 Happy Coding!!!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
