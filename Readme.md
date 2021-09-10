@@ -41,25 +41,39 @@ These caching conditions we can modify as per our requirement.
 **Get Product Information** (Caching happens post this GET call for a given productId for the first time)
 
 Method  **GET**
+
 URL     **http://localhost:8081/getproductinfo**
+
 Parameters **productId=152**
 
 **Update Product Information** (Cache gets updated post this PUT call for a given productId in the cache)
+
 Method  **PUT**
+
 URL     **http://localhost:8081/updateproduct**
 
 **Sample Payload**
+
 {
+
     "productId": 154,
+    
     "productName": "Laptop",
+    
     "productCategory": "Electronics",
+    
     "price": 3000.0,
+    
     "currency": "USD",
+    
     "description": "Dell Laptop"
+    
 }
 
 **Delete Product Information** (Cache value for a given productId gets deleted post this DELETE call)
+
 Method  **DELETE**
+
 URL     **http://localhost:8081/deleteproduct?productId=153**
 
 
